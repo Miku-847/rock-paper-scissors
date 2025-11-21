@@ -1,0 +1,256 @@
+        :root {
+            --bg-color: #f5f5f5;
+            --text-color: #333;
+            --button-bg: #ecf0f1;
+            --button-text: #333;
+        }
+
+        body.dark-mode {
+            --bg-color: #1e1e1e;
+            --text-color: #f0f0f0;
+            --button-bg: #2c2c2c;
+            --button-text: #f0f0f0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            min-height: 100vh;
+            margin: 0;
+            transition: background-color 0.5s ease;
+
+        }
+
+        /*Smaller screens!*/
+        /* Mobile phones */
+        @media (max-width: 500px) {
+            .move-buttons {
+                grid-template-columns: repeat(1, 1fr);
+                /* 1 button per row */
+                gap: 15px;
+            }
+
+            .move-button {
+                width: 100%;
+                /* full width */
+                height: 120px;
+                /* slightly smaller */
+            }
+
+            .move-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .header-right {
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Tablets screens */
+        @media (max-width: 768px) {
+            .move-buttons {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 buttons per row */
+                gap: 20px;
+            }
+
+            .move-button {
+                width: 100%;
+                height: 130px;
+            }
+
+            .move-icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* smaller desktops or narrow windows */
+        @media (max-width: 1024px) {
+            .move-buttons {
+                max-width: 500px;
+            }
+        }
+
+        /*regular css*/
+        h1 {
+            font-size: 2.5rem;
+            margin: 20px 0 10px;
+            color: #2c3e50;
+        }
+
+        p {
+            font-weight: normal;
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        .header-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+
+        .header-left p,
+        .header-right p {
+            margin: 0;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 4px;
+        }
+
+        #local-time {
+            font-weight: normal;
+            color: #2c3e50;
+        }
+
+        .header-center h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        #dark-mode-toggle {
+            padding: 10px 18px;
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: 2px solid #2c3e50;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.25s, transform 0.2s, border-color 0.25s;
+        }
+
+        #dark-mode-toggle:hover {
+            background-color: #d0d7de;
+            transform: translateY(-2px);
+        }
+
+        body.dark-mode #dark-mode-toggle {
+            background-color: #2c2c2c;
+            border-color: #444;
+        }
+
+        body.dark-mode #dark-mode-toggle:hover {
+            background-color: #3c3c3c;
+        }
+
+        .move-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 700px;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .move-button {
+            height: 150px;
+            width: 150px;
+            border: 2px solid #2c3e50;
+            border-radius: 12px;
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .move-button:hover {
+            background-color: #d0d7de;
+            transform: translateY(-3px);
+        }
+
+        .move-icon {
+            height: 80px;
+            width: 80px;
+        }
+
+        /* Click-pop animation for buttons */
+        .button-pop {
+            animation: pop 0.2s ease;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .js-result {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .js-result-update {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        .reset-autoplay-button {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .reset-autoplay-button button {
+            padding: 10px 20px;
+            border: 1px solid #2c3e50;
+            border-radius: 8px;
+            background-color: #bdc3c7;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .reset-autoplay-button button:hover {
+            background-color: #95a5a6;
+            transform: translateY(-2px);
+        }

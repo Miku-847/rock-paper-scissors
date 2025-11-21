@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Rock Paper Scissors Max</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <header class="header-container">
+        <div class="header-left">
+            <p id="local-time">Time</p>
+        </div>
+        <div class="header-right">
+            <p id="scoreboard">Score board 0:0</p>
+            <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        </div>
+    </header>
+
+    <h1>Rock Paper Scissors</h1>
+    <p>Take your pick</p>
+
+    <div class="move-buttons">
+        <button class="js-rock-button move-button"><img src="photos/rock-emoji.png" class="move-icon"
+                alt="Rock"></button>
+        <button class="js-paper-button move-button"><img src="photos/paper-emoji.png" class="move-icon"
+                alt="Paper"></button>
+        <button class="js-scissors-button move-button"><img src="photos/scissors-emoji.png" class="move-icon"
+                alt="Scissors"></button>
+    </div>
+
+    <div>
+        <p class="js-user-pick-update">You picked</p>
+        <p class="js-computer-pick-update">Computer picked</p>
+    </div>
+
+    <p class="js-result"></p>
+    <p class="js-result-update">WINS: 0, LOSES: 0, TIES: 0</p>
+
+    <div class="reset-autoplay-button">
+        <button class="js-reset-button">Reset Score</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
