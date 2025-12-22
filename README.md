@@ -1,6 +1,6 @@
 # Rock Paper Scissors
 
- **Live demo:** https://miku-847.github.io/rock-paper-scissors/](https://miku-847.github.io/RPS-practice-project/
+ **Live demo:** https://miku-847.github.io/RPS-practice-project/
 
 A small web-based Rock Paper Scissors game built with HTML, CSS, and JavaScript.
 
